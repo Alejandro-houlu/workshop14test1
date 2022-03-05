@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+<body>
+    <div>
+    <h1>Search Result</h1>
+
+    <tr th:if="${!error.isEmpty}">
+        <td colspan="2" th:text=${error}> </td>
+        <br><br>
+    </tr>
+    <tr th:unless="${!error.isEmpty}">
+        <td><span style="font-weight: bolder;">Name: </span><span th:text="${user.name}"> Name </span></td>
+        <td><span style="font-weight: bolder;">Email: </span><span th:text="${user.email}"> Email </span></td>
+        <td><span style="font-weight: bolder;">Phone Number: </span><span th:text="${user.phoneNumber}"> Phone Number </span></td>
+        <td><span style="font-weight: bolder;">Unique ID: </span><span th:text="${user.id}"> Unique ID </span></td><br><br>
+    </tr>
+    </div>
+
+    <div>
+
+        <a href="/">Home</a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 13</title>
+</head>
+<body>
+    <div id="signUpForm" style="font-size: larger;">
+        <h1 style="font-size: 50px;">Sign Up</h1>
+        <form class="form-inline" th:action="@{/save}" th:object=${contact} method="post" style="font-size: 80px;">
+        
+            <input placeholder="name" type="text" id="nameInput" th:field="*{name}" required/> <br>
+            <input placeholder="Email" type="email" id="emailInput" th:field="*{email}" required/><br>
+            <input placeholder="phoneNumber" type="text" id="numberInput" th:field="*{phoneNumber}" required/>
+            <br>
+            <input type="submit" class="signUpBtn" value="Sign Up" />
+            <br>
+        </form>
+    </div>
+
+    <div id="search" style="font-size: larger;">
+    
+            <h1 style="font-size: 50px;">Search</h1>
+
+            <form class="form-inline" th:action="@{/search}"  method="post" style="font-size: 80px;">
+        
+                <input placeholder="uniqueId" type="text" th:name="id" id="uniqueIdInput" required/>
+                <br>
+                <input type="submit" class="signUpBtn" value="Search" />
+                <br>
+            </form>
+
+    
+    </div>
+</body>
+</html>
