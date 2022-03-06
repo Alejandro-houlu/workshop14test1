@@ -54,7 +54,7 @@ public String searchUser(@RequestParam(value = "id", required = false ) String u
     Contact user = contactService.findById(uniqueId);
     String error = "";
 
-    if(user == null){
+    if(user.getId() == null){
 
         error = "User not found";
 
