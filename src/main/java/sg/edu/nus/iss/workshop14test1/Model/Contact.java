@@ -52,6 +52,10 @@ public class Contact implements Serializable {
         return uniqueId.substring(0,8);
     }
 
+    public String setId(String id){
+        return this.id = id;
+    }
+
     public Contact(String name, String email, String phoneNumber){
         this.name = name;
         this.email = email;
